@@ -31,17 +31,14 @@ CifraCesar(){
         for (int i = 0; i < texto.length(); i++) {
             char caractere = texto.charAt(i);
 
-            //Verifica se é uma letra maiúscula
             if (Character.isUpperCase(caractere)) {
                 char cifrado = (char) (((caractere - 'A' + chave) % 26) + 'A');
                 textoCifrado.append(cifrado);
             }
-            //Verifica se é uma letra minúscula
             else if (Character.isLowerCase(caractere)) {
                 char cifrado = (char) (((caractere - 'a' + chave) % 26) + 'a');
                 textoCifrado.append(cifrado);
             }
-            //Mantém outros caracteres (espaços, pontuações, etc.)
             else {
                 textoCifrado.append(caractere);
             }
